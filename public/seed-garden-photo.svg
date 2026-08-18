@@ -1,0 +1,24 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f7f4ec" />
+  <ellipse cx="200" cy="235" rx="150" ry="14" fill="#ddd6c7" opacity="0.6" />
+
+  <!-- basket -->
+  <path d="M90 190 L120 260 Q200 278 280 260 L310 190 Z" fill="#c9a877" />
+  <path d="M90 190 L310 190 L300 205 L100 205 Z" fill="#b8975f" />
+  <path d="M115 190 Q200 165 285 190" fill="none" stroke="#8a6f43" stroke-width="6" stroke-linecap="round" />
+
+  <!-- zucchini -->
+  <rect x="150" y="150" width="120" height="34" rx="17" fill="#1f8a79" transform="rotate(-8 210 167)" />
+  <rect x="150" y="150" width="120" height="10" rx="5" fill="#4fbba8" opacity="0.6" transform="rotate(-8 210 167)" />
+
+  <!-- tomatoes -->
+  <circle cx="150" cy="150" r="26" fill="#e8543a" />
+  <circle cx="150" cy="150" r="26" fill="#ffffff" opacity="0.08" />
+  <path d="M150 124 q6 -10 14 -6 q-4 8 -14 6" fill="#1f8a79" />
+
+  <circle cx="205" cy="140" r="21" fill="#cf4128" />
+  <path d="M205 119 q5 -8 12 -5 q-3 7 -12 5" fill="#1f8a79" />
+
+  <circle cx="250" cy="158" r="18" fill="#e8543a" />
+  <path d="M250 140 q4 -7 10 -4 q-2 6 -10 4" fill="#1f8a79" />
+</svg>

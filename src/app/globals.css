@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Cream/white base with a coral + teal accent pair — chosen specifically for
+   contrast: cards are pure white against a warm-but-pale page background, so
+   they visibly separate instead of blending into one brown wash. Coral and
+   teal are opposite temperatures (warm vs cool) rather than two shades of
+   the same hue, so "mine" vs "theirs," or "accent" vs "success," read as
+   genuinely different colors at a glance, not just lighter/darker.
+   Values live on :root/dark-media as plain vars, then get mapped into
+   Tailwind's theme below. Every component reads the *mapped* names
+   (bg-cream, text-ink, border-border, text-coral, ...) so dark mode is just
+   this one swap — no scattered `dark:` variants needed anywhere else. */
+:root {
+  --cream: #f7f4ec;
+  --surface: #ffffff;
+  --ink: #201c18;
+  --muted: #75695c;
+  --border-c: #ddd6c7;
+  --coral: #e8543a;
+  --coral-hover: #cf4128;
+  --teal: #1f8a79;
+  --teal-hover: #17695c;
+  --shadow-soft: 0 6px 20px -6px rgba(32, 28, 24, 0.16), 0 2px 8px -2px rgba(32, 28, 24, 0.1);
+  /* Feed cards specifically need to separate from the page more assertively
+     than a button or a small chip — a dedicated, stronger shadow so that
+     push doesn't ripple into every other shadow-soft use in the app. */
+  --shadow-card: 0 10px 30px -8px rgba(32, 28, 24, 0.2), 0 4px 10px -4px rgba(32, 28, 24, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #15130f;
+    --surface: #231f19;
+    --ink: #f5efe4;
+    --muted: #a79c8c;
+    --border-c: #3d362b;
+    --coral: #f0755a;
+    --coral-hover: #f59780;
+    --teal: #4fbba8;
+    --teal-hover: #72ccbc;
+    --shadow-soft: 0 6px 20px -6px rgba(0, 0, 0, 0.55), 0 2px 8px -2px rgba(0, 0, 0, 0.45);
+    --shadow-card: 0 10px 30px -8px rgba(0, 0, 0, 0.65), 0 4px 10px -4px rgba(0, 0, 0, 0.55);
+  }
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-border: var(--border-c);
+  --color-coral: var(--coral);
+  --color-coral-hover: var(--coral-hover);
+  --color-teal: var(--teal);
+  --color-teal-hover: var(--teal-hover);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-card: var(--shadow-card);
+  --font-sans: var(--font-warm-sans);
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-warm-sans), Arial, Helvetica, sans-serif;
+}
